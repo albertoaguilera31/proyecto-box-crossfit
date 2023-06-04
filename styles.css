@@ -61,6 +61,21 @@
     padding-bottom: 20px;
 }
 
+/*testimonio*/
+.carrusel{
+    width: 100%;
+    height: 400px;
+    background-color: rgba(233, 9, 9, 0.934);
+    margin-top: 50px;
+}
+
+.testimonios{
+    color: white;
+}
+
+
+
+
 #formulario{
     padding-top: 50px;
     color: black;
