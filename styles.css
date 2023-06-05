@@ -7,13 +7,14 @@
     background-color: white;
     padding: 2rem;
     border-bottom: 2px solid rgb(194, 10, 10);
-    height: 60px;
+    height: 80px;
     box-shadow: 1px 2px 3px 3px lightgrey;
 }
 
 .navbar .container-fluid a{
     color: black;
     font-weight: bold;
+    font-size: 1.3rem;
 }
 
 .navbar .container-fluid a:hover{
@@ -47,11 +48,10 @@
 #portada{
     padding-top: 20px;
     width: auto;
-    margin-left: 20px;
-    margin-right: 20px;
 }
 
-.container{
+.container-fluid{
+    height: 450px;
     padding-top: 20px;
     text-align: center;
 }
@@ -61,17 +61,50 @@
     padding-bottom: 20px;
 }
 
-/*testimonio*/
+/*testimonios*/
 .carrusel{
-    width: 100%;
-    height: 400px;
+    height: 450px;
     background-color: rgba(233, 9, 9, 0.934);
-    margin-top: 50px;
+    border-bottom: 2px solid rgb(250, 222, 67);
+    border-top: 2px solid rgb(250, 222, 67);
 }
 
 .testimonios{
     color: white;
+    text-align: center;
+    transform: translateY(-20px);
 }
+
+#carouselExampleCaptions{
+    max-width: 500px;
+    max-height: 250px;
+    align-items: center;
+}
+
+.carousel-img{
+    width: 100%;
+  height: auto;
+  height: 300px;
+}
+
+/*Suscripciones*/
+
+.titulo{
+    padding-top: 50px;
+}
+
+.card{
+    margin-left: 65px;
+}
+
+.cards{
+    transform: translateY(-330px);
+}
+
+
+
+
+
 
 
 
