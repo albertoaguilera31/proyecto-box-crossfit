@@ -101,6 +101,54 @@
     transform: translateY(-330px);
 }
 
+.botones-suscripcion{
+    text-decoration: none;
+}
+
+#btn-suscripcion1{
+    background-color: rgb(250, 222, 67);
+    border-radius: 5px;
+    border: 2px solid black;
+}
+
+#btn-suscripcion1 a{
+    color: black;
+    font-weight: bold;
+}
+
+#btn-suscripcion2{
+    background-color: rgb(250, 222, 67);
+    border-radius: 5px;
+    border: 2px solid black;
+}
+
+#btn-suscripcion2 a{
+    color: black;
+    font-weight: bold;
+}
+
+#btn-suscripcion3{
+    background-color: rgb(250, 222, 67);
+    border-radius: 5px;
+    border: 2px solid black;
+}
+
+#btn-suscripcion3 a{
+    color: black;
+    font-weight: bold;
+}
+
+#btn-suscripcion4{
+    background-color: rgb(250, 222, 67);
+    border-radius: 5px;
+    border: 2px solid black;
+}
+
+#btn-suscripcion4 a{
+    color: black;
+    font-weight: bold;
+}
+
 
 
 
