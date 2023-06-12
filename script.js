@@ -1,4 +1,85 @@
-// Definir la clase Suscripcion
+//Uso del DOM para estilo de las cards de suscricripcion
+
+//card legionario
+var legionario = document.getElementById("card-legionario");
+
+// Agregar el evento mouseover a la tarjeta
+legionario.addEventListener("mouseover", function() {
+  legionario.style.boxShadow = "0px 0px 10px rgb(161, 5, 200)";
+});
+
+// Agregar el evento mouseout a la tarjeta
+legionario.addEventListener("mouseout", function() {
+  legionario.style.boxShadow = "none";
+});
+
+//card espartano
+var espartano = document.getElementById("card-espartano");
+
+// Agregar el evento mouseover a la tarjeta
+espartano.addEventListener("mouseover", function() {
+  espartano.style.boxShadow = "0px 0px 10px rgb(212, 34, 34)";
+});
+
+// Agregar el evento mouseout a la tarjeta
+espartano.addEventListener("mouseout", function() {
+  espartano.style.boxShadow = "none";
+});
+
+//card tercio
+var tercio = document.getElementById("card-tercio");
+
+// Agregar el evento mouseover a la tarjeta
+tercio.addEventListener("mouseover", function() {
+  tercio.style.boxShadow = "0px 0px 10px rgb(246, 158, 6)";
+});
+
+// Agregar el evento mouseout a la tarjeta
+tercio.addEventListener("mouseout", function() {
+  tercio.style.boxShadow = "none";
+});
+
+//card navy seal
+var navy = document.getElementById("card-navy");
+
+// Agregar el evento mouseover a la tarjeta
+navy.addEventListener("mouseover", function() {
+  navy.style.boxShadow = "0px 0px 10px rgb(6, 66, 246)";
+});
+
+// Agregar el evento mouseout a la tarjeta
+navy.addEventListener("mouseout", function() {
+  navy.style.boxShadow = "none";
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*// Definir la clase Suscripcion
 class Suscripcion {
     constructor(nombre, correo, tipo) {
       this.nombre = nombre;
@@ -29,4 +110,4 @@ class Suscripcion {
     nameElement.textContent = `Nombre: ${suscripcion.nombre}`;
     emailElement.textContent = `Correo electrónico: ${suscripcion.correo}`;
     subscriptionTypeElement.textContent = `Tipo de suscripción: ${suscripcion.tipo}`;
-  });
+  });*/
