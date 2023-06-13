@@ -99,6 +99,7 @@
 
 .cards{
     transform: translateY(-330px);
+    height: 400px;
 }
 
 .botones-suscripcion{
@@ -185,8 +186,18 @@
     color: white;
 }
 
+/*FOOTER*/
+footer{
+    background-color: black;
+    color: white;
+    height: 300px;
+    border-top: 2px solid rgb(250, 222, 67);;
+}
 
-
+footer h3{
+    text-align: center;
+    padding-top: 45px;
+}
 
 
 
