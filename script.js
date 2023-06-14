@@ -52,34 +52,8 @@ navy.addEventListener("mouseout", function() {
   navy.style.boxShadow = "none";
 });
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*// Definir la clase Suscripcion
+/*Formulario*/
+// Definir la clase Suscripcion
 class Suscripcion {
     constructor(nombre, correo, tipo) {
       this.nombre = nombre;
@@ -110,4 +84,4 @@ class Suscripcion {
     nameElement.textContent = `Nombre: ${suscripcion.nombre}`;
     emailElement.textContent = `Correo electrónico: ${suscripcion.correo}`;
     subscriptionTypeElement.textContent = `Tipo de suscripción: ${suscripcion.tipo}`;
-  });*/
+  });
