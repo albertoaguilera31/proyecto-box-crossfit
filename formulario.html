@@ -21,7 +21,7 @@
         <div class="container-fluid">
           <div class="collapse navbar-collapse" id="navbar-toggler">
             <a class="navbar-brand" href="./index.html">
-              <img src="./imagenes/pesa-rusa.png" width="50" alt="Warriors box">WARRIOS BOX<img>
+              <img src="./imagenes/pesa-rusa.png" width="50" alt="Warriors box">WARRIOS BOX</img>
             </a>
           </div>
         </div>
@@ -29,17 +29,30 @@
       <!--Formulario-->
 <div id="formulario">
     <h1>Suscripción al Box de CrossFit</h1>
-    <div id="subscription-form">
-        <input type="text" id="name-input" placeholder="Nombre completo"><br>
-        <input type="email" id="email-input" placeholder="Correo electrónico"><br>
-        <button id="subscribe-btn">Suscribirse</button>
-    </div>
-    <div id="subscription-details">
-        <h2>Detalles de la suscripción</h2>
-        <p id="name"></p>
-        <p id="email"></p>
-        <p id="subscription-type"></p>
-    </div>
+    <form>
+      <label for="nombre">Nombre:</label>
+      <input type="text" id="nombre" required>
+    
+      <label for="apellido">Apellido:</label>
+      <input type="text" id="apellido" required>
+    
+      <label for="fecha-nacimiento">Fecha de nacimiento:</label>
+      <input type="date" id="fecha-nacimiento" required>
+    
+      <label for="email">Correo electrónico:</label>
+      <input type="email" id="email" required>
+    
+      <label for="opciones">Opciones:</label>
+      <select id="opciones">
+        <option value="opcion1">Opción 1</option>
+        <option value="opcion2">Opción 2</option>
+        <option value="opcion3">Opción 3</option>
+        <option value="opcion4">Opción 4</option>
+      </select>
+    
+      <button type="submit">Enviar</button>
+    </form>
+    
 </div>
 
 

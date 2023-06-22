@@ -43,6 +43,14 @@
     
 }
 
+@media screen and (max-width: 767px){
+    .navbar-brand{
+        display: none;
+    }
+}
+    
+
+
 /*hero*/
 
 #portada{
@@ -50,16 +58,26 @@
     width: auto;
 }
 
-.container-fluid{
-    height: 450px;
+#parrafo1{
+    height: 400px;
     padding-top: 20px;
+    padding-bottom: 20px;
     text-align: center;
+    font-size: 18px;
 }
 
 .mt-5{
     text-align: center;
     padding-bottom: 20px;
+    margin-top: 20px;
 }
+
+@media screen and (max-width: 767px){
+    #parrafo{
+        font-size: 12px;
+    }
+}
+
 
 /*testimonios*/
 .carrusel{
@@ -91,23 +109,21 @@
 
 .titulo{
     padding-top: 50px;
+    text-align: center;
+    padding-bottom: 20px;
 }
 
 #contenedor-cards{
-    height: 700px;
+    margin-bottom: 50px;
 }
 
-.card{
-    margin-left: 65px;
-}
-
-.cards{
-    transform: translateY(-330px);
-    height: 450px;
-}
 
 .botones-suscripcion{
     text-decoration: none;
+}
+
+.card-title{
+    font-weight: bold;
 }
 
 #btn-suscripcion1{
