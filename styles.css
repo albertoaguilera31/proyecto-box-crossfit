@@ -5,16 +5,16 @@
 
 .navbar{
     background-color: white;
-    padding: 2rem;
+    padding: 2 rem;
     border-bottom: 2px solid rgb(194, 10, 10);
-    height: 80px;
+    height: 70px;
     box-shadow: 1px 2px 3px 3px lightgrey;
 }
 
 .navbar .container-fluid a{
     color: black;
     font-weight: bold;
-    font-size: 1.3rem;
+    font-size: 1.2rem;
 }
 
 .navbar .container-fluid a:hover{
@@ -48,8 +48,28 @@
         display: none;
     }
 }
-    
 
+@media screen and (max-width: 767px) {
+    .navbar-collapse {
+      background-color: rgba(222, 102, 102, 0.83);
+      position: absolute;
+      top: 100%;
+      left: 0;
+      width: 100%;
+      height: calc(40vh - 70px);
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+    
+    .navbar .navbar-nav .nav-link {
+      color: white;
+      text-shadow: 1px 2px 3px 3px black;
+    }
+  }
+  
 
 /*hero*/
 
