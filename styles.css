@@ -84,6 +84,22 @@
       text-shadow: 1px 2px 3px 3px black;
     }
   }
+
+  @media screen and (max-width: 767px){
+    .floating-link {
+        position: fixed;
+        bottom: 7px; 
+        right: 7px;
+        text-decoration: none;
+        color: black; 
+      }
+
+      .floating-icon {
+        width: 20px; 
+        height: 20px;
+        filter: hue-rotate(190deg);
+      }
+}
   
 
 /*hero*/
