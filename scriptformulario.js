@@ -226,10 +226,15 @@ function mostrarDatosSuscripcion() {
       <strong>Apellido:</strong> ${mostrarDataJson.apellido}<br>
       <strong>Edad:</strong> ${mostrarDataJson.edad}<br>
       <strong>Suscripción seleccionada:</strong> ${mostrarDataJson.opcionCliente}<br>
-      <strong>Código de Suscripción:</strong> ${codigoSuscripcion}
+      <strong>Código de Suscripción:</strong> ${codigoSuscripcion}<br>
+      <strong>Nota:</strong> Utiliza el codigo de suscripción para iniciar tus entrenamientos presenciales<br>
+      en la sede de tu preferencia.
     `,
     icon: 'info',
     confirmButtonText: 'Aceptar'
   });
 }
+
+
+
 
