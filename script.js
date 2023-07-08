@@ -54,15 +54,41 @@ navy.addEventListener("mouseout", function() {
 
 //FUNCION PARA CAMBIAR AUTOMATICAMENTE LAS IMAGENES DEL CARRUSEL
 
-const carousel = new bootstrap.Carousel(document.getElementById('carouselExampleCaptions'), {
-  interval: 3000 // Intervalo de tiempo en milisegundos (3 segundos)
-});
+const carousel = document.getElementById('carouselExampleCaptions');
+const interval = 3000; // Intervalo de tiempo en milisegundos (3 segundos)
+
+// Función para cambiar de diapositiva automáticamente
+function cambiarDiapositiva() {
+  const slides = carousel.querySelectorAll('.carousel-item');
+  const activeSlide = carousel.querySelector('.carousel-item.active');
+  const activeIndex = Array.from(slides).indexOf(activeSlide);
+
+  const nextIndex = (activeIndex + 1) % slides.length;
+
+  carousel.querySelector('.carousel-indicators').children[activeIndex].classList.remove('active');
+  carousel.querySelector('.carousel-indicators').children[nextIndex].classList.add('active');
+
+  slides[activeIndex].classList.remove('active');
+  slides[nextIndex].classList.add('active');
+}
+
+//CODIGO PARA CARGAR INFORMACIÓN DEL ARCHIVO JSON AL CORRUSEL USANDO FETCH
+
+fetch('./index.json')
+.then(Response=> Response.json())
+.then(data => {
+  
+})
+
+// Iniciar el carrusel automáticamente
+setInterval(cambiarDiapositiva, interval);
+
 
 //SCROLL DE LA PAGINA
 
 window.onscroll = function() {
   // Código a ejecutar cuando se activa el scroll
-  const iconovolver = document.querySelector('.floating-icon');
+  const iconovolver = document.querySelector('.floating-link');
   iconovolver.style.display = 'block';
 };
 
