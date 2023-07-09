@@ -142,11 +142,11 @@
 .testimonios{
     color: white;
     text-align: center;
-    transform: translateY(-20px);
+    transform: translateY(-30px);
 }
 
 #carouselExampleCaptions{
-    max-width: 500px;
+    max-width: 600px;
     max-height: 250px;
     align-items: center;
 }
@@ -154,7 +154,7 @@
 .carousel-img{
     width: 100%;
   height: auto;
-  height: 300px;
+  height: 350px;
 }
 
 /*Suscripciones*/

@@ -75,13 +75,10 @@ function cambiarDiapositiva() {
 //CODIGO PARA CARGAR INFORMACIÓN DEL ARCHIVO JSON AL CORRUSEL USANDO FETCH
 
 fetch('./index.json')
-.then(Response=> Response.json())
-.then(data => {
-  
-})
-
-// Iniciar el carrusel automáticamente
-setInterval(cambiarDiapositiva, interval);
+  .then(response => response.json())
+  .then(data => {
+    
+  })
 
 
 //SCROLL DE LA PAGINA
