@@ -74,11 +74,41 @@ function cambiarDiapositiva() {
 
 //CODIGO PARA CARGAR INFORMACIÓN DEL ARCHIVO JSON AL CORRUSEL USANDO FETCH
 
-fetch('./index.json')
-  .then(response => response.json())
-  .then(data => {
-    
-  })
+document.addEventListener('DOMContentLoaded', () => {
+  // Obtén una referencia al elemento del carrusel
+  const carousel = document.querySelector('.carousel-inner');
+
+  // Carga el archivo JSON
+  fetch('index.json')
+    .then(response => response.json())
+    .then(data => {
+      // Itera sobre los objetos del JSON
+      data.forEach((objeto, index) => {
+        // Crea un nuevo elemento de carrusel para cada objeto
+        const carouselItem = document.createElement('div');
+        carouselItem.classList.add('carousel-item');
+
+        // Si es el primer objeto, añade la clase 'active' para que se muestre primero
+        if (index === 0) {
+          carouselItem.classList.add('active');
+        }
+
+        // Crea el contenido del carrusel con los datos del objeto
+        carouselItem.innerHTML = `
+          <img src="./imagenes/carrusel/imagen${index + 1}.jpg" class="d-block w-100 carousel-img" alt="...">
+          <div class="carousel-caption d-none d-md-block">
+            <h5 id="nombretestimonio">${objeto.nombre}</h5>
+            <p>Edad: <span id="edadtestimonio">${objeto.edad}</span></p>
+            <p id="comentariostestimonio">${objeto.comentarios}</p>
+          </div>
+        `;
+
+        // Agrega el elemento del carrusel al carrusel principal
+        carousel.appendChild(carouselItem);
+      });
+    })
+    .catch(error => console.error(error));
+});
 
 
 //SCROLL DE LA PAGINA
@@ -88,11 +118,6 @@ window.onscroll = function() {
   const iconovolver = document.querySelector('.floating-link');
   iconovolver.style.display = 'block';
 };
-
-
-
-
-
 
   //FORMULARIO
 
@@ -223,74 +248,3 @@ formulario.addEventListener('submit', function(event) {
 
   formulario.reset(); // Reiniciar el formulario
 });
-
-  
-  //CODIGO PARA INCLUIR PETICIONES FETCH Y UN ARCHIVO JSON
-/*
-formulario.addEventListener('submit', async function(event) {
-  event.preventDefault();
-
-  const nombre = document.getElementById('nombre').value;
-  const apellido = document.getElementById('apellido').value;
-  const edad = parseInt(document.getElementById('edad').value);
-  const opcionCliente = opcionesSelect.value;
-
-  const contenedorMensaje = document.getElementById('contenedor-mensaje');
-
-  if (edad < 18) {
-    const mensajeElemento = document.createElement('p');
-    mensajeElemento.textContent = 'Debes ser mayor de 18 años para acceder.';
-    mensajeElemento.style.color = 'red';
-    contenedorMensaje.innerHTML = '';
-    contenedorMensaje.appendChild(mensajeElemento);
-  } else {
-    const mensajeElemento = document.createElement('p');
-    mensajeElemento.textContent = '¡Bienvenido al Warriors Box, futuro guerrero!';
-    mensajeElemento.style.color = '#53D106';
-
-    contenedorMensaje.innerHTML = '';
-    contenedorMensaje.appendChild(mensajeElemento);
-
-    const cliente = new Cliente(nombre, apellido, edad, opcionCliente);
-
-    const formularioJson = JSON.stringify(cliente);
-
-    try {
-      const response = await fetch('ruta-al-archivo.json', {
-        method: 'POST',
-        body: formularioJson,
-        headers: {
-          'Content-Type': 'application/json'
-        }
-      });
-
-      if (response.ok) {
-        const data = await response.json();
-        // Manipula los datos JSON recibidos
-        console.log('Respuesta del servidor:', data);
-      } else {
-        throw new Error('Error al enviar los datos');
-      }
-    } catch (error) {
-      console.error('Error de red:', error);
-    }
-
-    const codigoSuscripcion = generarCodigoAleatorio();
-    localStorage.setItem('codigoSuscripcion', codigoSuscripcion);
-
-    const contenedorDatos = document.getElementById('contenedor-datos');
-    contenedorDatos.innerHTML = `
-      Nombre: ${nombre} <br>
-      Apellido: ${apellido} <br>
-      Edad: ${edad} <br>
-      Suscripción seleccionada: ${opcionCliente} <br>
-      <p>Código de Suscripción: <span id="codigoSuscripcion">${codigoSuscripcion}</span></p>
-    `;
-  }
-
-  formulario.reset();
-});
-
-
-
-*/
