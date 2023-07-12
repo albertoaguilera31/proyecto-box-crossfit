@@ -1,3 +1,4 @@
+
 //FORMULARIO DE SUSCRIPCIÓN
 
   const formulario = document.getElementById('formularioSuscripcion');
