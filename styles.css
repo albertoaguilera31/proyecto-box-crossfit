@@ -334,4 +334,11 @@ footer h3{
     margin: 0 auto;
     text-align: center;
   }
+
+  /*FOOTER*/
+  
+section a img{
+    height: 30px;
+    width: 30px;
+  }
   
