@@ -267,7 +267,7 @@
 footer{
     background-color: rgba(0, 0, 0, 0.633);
     color: white;
-    height: 200px;
+    height: 250px;
     border-top: 2px solid rgb(250, 222, 67);;
     margin-top: 35px;
 }
@@ -277,6 +277,15 @@ footer h3{
     padding-top: 45px;
 }
 
+section a img{
+    height: 30px;
+    width: 30px;
+  }
+
+  footer p{
+    text-align: center;
+    transform: translateY(80px);
+  }
 
 /*FORMULARIO*/
 
@@ -335,10 +344,6 @@ footer h3{
     text-align: center;
   }
 
-  /*FOOTER*/
   
-section a img{
-    height: 30px;
-    width: 30px;
-  }
+
   
