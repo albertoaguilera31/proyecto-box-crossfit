@@ -52,13 +52,6 @@
     font-weight: bold;
 }
 
-.navbar button:hover{
-    color: white;
-    background-color: rgb(194, 10, 10);
-    box-shadow: 2px 2px 5px black;
-    cursor: pointer;
-    
-}
 
 @media screen and (max-width: 767px){
     .navbar-brand{
@@ -278,14 +271,20 @@ footer h3{
 }
 
 section a img{
-    height: 30px;
-    width: 30px;
+    height: 50px;
+    width: 50px;
+    transform: translateX(500px);
+    margin-right: 50px;
+    margin-top: 25px;
   }
 
   footer p{
     text-align: center;
-    transform: translateY(80px);
+    transform: translateY(65px);
+    margin-top: 10px;
+    margin-bottom: 50px;
   }
+
 
 /*FORMULARIO*/
 

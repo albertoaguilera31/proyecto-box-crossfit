@@ -1,7 +1,7 @@
 //Uso del DOM para estilo de las cards de suscricripcion
 
 //card legionario
-var legionario = document.getElementById("card-legionario");
+let legionario = document.getElementById("card-legionario");
 
 // Agregar el evento mouseover a la tarjeta
 legionario.addEventListener("mouseover", function() {
@@ -14,7 +14,7 @@ legionario.addEventListener("mouseout", function() {
 });
 
 //card espartano
-var espartano = document.getElementById("card-espartano");
+let espartano = document.getElementById("card-espartano");
 
 // Agregar el evento mouseover a la tarjeta
 espartano.addEventListener("mouseover", function() {
@@ -27,7 +27,7 @@ espartano.addEventListener("mouseout", function() {
 });
 
 //card tercio
-var tercio = document.getElementById("card-tercio");
+let tercio = document.getElementById("card-tercio");
 
 // Agregar el evento mouseover a la tarjeta
 tercio.addEventListener("mouseover", function() {
@@ -40,7 +40,7 @@ tercio.addEventListener("mouseout", function() {
 });
 
 //card navy seal
-var navy = document.getElementById("card-navy");
+let navy = document.getElementById("card-navy");
 
 // Agregar el evento mouseover a la tarjeta
 navy.addEventListener("mouseover", function() {
@@ -50,6 +50,23 @@ navy.addEventListener("mouseover", function() {
 // Agregar el evento mouseout a la tarjeta
 navy.addEventListener("mouseout", function() {
   navy.style.boxShadow = "none";
+});
+
+//Uso del DOM para estilo en la navabar
+let botonBarra = document.getElementById("botonBarra1")
+
+botonBarra.addEventListener("mouseover", function() {
+    botonBarra.style.color= "white";
+    botonBarra.style.backgroundColor = "rgb(194, 10, 10)";
+    botonBarra.style.boxShadow= "2px 2px 5px black";
+    botonBarra.style.cursor= "pointer";
+
+    botonBarra.addEventListener("mouseout", function() {
+      botonBarra.style.color = "";
+      botonBarra.style.backgroundColor = ""; 
+      botonBarra.style.boxShadow = ""; 
+      botonBarra.style.cursor = ""; 
+  });
 });
 
 //FUNCION PARA CAMBIAR AUTOMATICAMENTE LAS IMAGENES DEL CARRUSEL
@@ -137,5 +154,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   setInterval(nextSlide, intervalTime);
 });
+
+
 
 
