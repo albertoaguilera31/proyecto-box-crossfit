@@ -261,7 +261,8 @@ footer{
     background-color: rgba(0, 0, 0, 0.633);
     color: white;
     height: 250px;
-    border-top: 2px solid rgb(250, 222, 67);;
+    border-top: 2px solid rgb(250, 222, 67);
+    border-bottom: 3px solid rgb(250, 222, 67);
     margin-top: 35px;
 }
 
@@ -280,7 +281,7 @@ section a img{
 
   footer p{
     text-align: center;
-    transform: translateY(65px);
+    transform: translateY(55px);
     margin-top: 10px;
     margin-bottom: 50px;
   }
@@ -341,6 +342,13 @@ section a img{
     font-size: 2.5rem;
     margin: 0 auto;
     text-align: center;
+  }
+
+  hr{
+    border: none;
+    height: 1px;
+    background-color: #000; /* Cambia el color según tus preferencias */
+    margin: 20px 0; /* Ajusta el margen según sea necesario */
   }
 
   

@@ -71,23 +71,7 @@ botonBarra.addEventListener("mouseover", function() {
 
 //FUNCION PARA CAMBIAR AUTOMATICAMENTE LAS IMAGENES DEL CARRUSEL
 
-const carousel = document.getElementById('carouselExampleCaptions');
-const interval = 3000; // Intervalo de tiempo en milisegundos (3 segundos)
 
-// Función para cambiar de diapositiva automáticamente
-function cambiarDiapositiva() {
-  const slides = carousel.querySelectorAll('.carousel-item');
-  const activeSlide = carousel.querySelector('.carousel-item.active');
-  const activeIndex = Array.from(slides).indexOf(activeSlide);
-
-  const nextIndex = (activeIndex + 1) % slides.length;
-
-  carousel.querySelector('.carousel-indicators').children[activeIndex].classList.remove('active');
-  carousel.querySelector('.carousel-indicators').children[nextIndex].classList.add('active');
-
-  slides[activeIndex].classList.remove('active');
-  slides[nextIndex].classList.add('active');
-}
 
 //CODIGO PARA CARGAR INFORMACIÓN DEL ARCHIVO JSON AL CORRUSEL USANDO FETCH
 
@@ -136,24 +120,6 @@ window.onscroll = function() {
   iconovolver.style.display = 'block';
 };
 
-
-//funcionalidad de diapositivas del carrusel
-
-document.addEventListener('DOMContentLoaded', () => {
-  const carousel = document.querySelector('.carousel-inner');
-  const carouselItems = carousel.querySelectorAll('.carousel-item');
-  const totalItems = carouselItems.length;
-  let currentItem = 0;
-  const intervalTime = 3000; // Intervalo de 3 segundos (ajusta según tus necesidades)
-
-  function nextSlide() {
-    carouselItems[currentItem].classList.remove('active');
-    currentItem = (currentItem + 1) % totalItems;
-    carouselItems[currentItem].classList.add('active');
-  }
-
-  setInterval(nextSlide, intervalTime);
-});
 
 
 
