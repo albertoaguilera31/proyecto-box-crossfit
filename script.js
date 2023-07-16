@@ -1,7 +1,8 @@
 //Uso del DOM para estilo de las cards de suscricripcion
 
-//card legionario
+//tarjeta legionario
 let legionario = document.getElementById("card-legionario");
+let btn1 = document.getElementById("btn-suscripcion1");
 
 // Agregar el evento mouseover a la tarjeta
 legionario.addEventListener("mouseover", function() {
@@ -13,8 +14,21 @@ legionario.addEventListener("mouseout", function() {
   legionario.style.boxShadow = "none";
 });
 
-//card espartano
+//Boton de la tarjeta legionario
+btn1.addEventListener("mouseover", function(){
+  btn1.style.backgroundColor= "rgb(161, 5, 200)";
+  btn1.style.color= "white";
+});
+
+btn1.addEventListener("mouseout", function(){
+  btn1.style.backgroundColor= "";
+  btn1.style.color="";
+});
+
+
+//tarjeta espartano
 let espartano = document.getElementById("card-espartano");
+let btn2 = document.getElementById("btn-suscripcion2");
 
 // Agregar el evento mouseover a la tarjeta
 espartano.addEventListener("mouseover", function() {
@@ -26,8 +40,20 @@ espartano.addEventListener("mouseout", function() {
   espartano.style.boxShadow = "none";
 });
 
-//card tercio
+//Boton de la tarjeta espartano
+btn2.addEventListener("mouseover", function(){
+  btn2.style.backgroundColor= "rgb(212, 34, 34)";
+  btn2.style.color= "white";
+});
+
+btn2.addEventListener("mouseout", function(){
+  btn2.style.backgroundColor= "";
+  btn2.style.color="";
+});
+
+//Tarjeta tercio
 let tercio = document.getElementById("card-tercio");
+let btn3 = document.getElementById("btn-suscripcion3");
 
 // Agregar el evento mouseover a la tarjeta
 tercio.addEventListener("mouseover", function() {
@@ -39,8 +65,20 @@ tercio.addEventListener("mouseout", function() {
   tercio.style.boxShadow = "none";
 });
 
-//card navy seal
+//Boton de la tarjeta tercio
+btn3.addEventListener("mouseover", function(){
+  btn3.style.backgroundColor= "rgb(246, 158, 6)";
+  btn3.style.color= "white";
+});
+
+btn3.addEventListener("mouseout", function(){
+  btn3.style.backgroundColor= "";
+  btn3.style.color="";
+});
+
+//tarjeta navy seal
 let navy = document.getElementById("card-navy");
+let btn4 = document.getElementById("btn-suscripcion4");
 
 // Agregar el evento mouseover a la tarjeta
 navy.addEventListener("mouseover", function() {
@@ -50,6 +88,17 @@ navy.addEventListener("mouseover", function() {
 // Agregar el evento mouseout a la tarjeta
 navy.addEventListener("mouseout", function() {
   navy.style.boxShadow = "none";
+});
+
+//Boton de la tarjeta navy seal
+btn4.addEventListener("mouseover", function(){
+  btn4.style.backgroundColor= "rgb(6, 66, 246)";
+  btn4.style.color= "white";
+});
+
+btn4.addEventListener("mouseout", function(){
+  btn4.style.backgroundColor= "";
+  btn4.style.color="";
 });
 
 //Uso del DOM para estilo en la navabar
@@ -73,7 +122,7 @@ botonBarra.addEventListener("mouseover", function() {
 
 
 
-//CODIGO PARA CARGAR INFORMACIÓN DEL ARCHIVO JSON AL CORRUSEL USANDO FETCH
+//CODIGO PARA CARGAR INFORMACIÓN DEL ARCHIVO JSON AL CARRUSEL USANDO FETCH
 
 document.addEventListener('DOMContentLoaded', () => {
   // Obtén una referencia al elemento del carrusel
@@ -111,7 +160,6 @@ document.addEventListener('DOMContentLoaded', () => {
     .catch(error => console.error(error));
 });
 
-
 //SCROLL DE LA PAGINA
 
 window.onscroll = function() {
@@ -119,6 +167,25 @@ window.onscroll = function() {
   const iconovolver = document.querySelector('.floating-link');
   iconovolver.style.display = 'block';
 };
+
+//USO DEL DOM PARA AÑADIR EFECTOS A LOS ICONOS DE REDES SOCIALES DE CONTACTO
+
+let facebook = document.getElementById("facebook");
+let icon = facebook.querySelector("img");
+
+// Agregar el evento mouseover al icono
+icon.addEventListener("mouseover", function() {
+  icon.style.borderRadius = "50%";
+  facebook.style.backgroundColor = "white";
+});
+
+// Agregar el evento mouseout al icono
+icon.addEventListener("mouseout", function() {
+  icon.style.borderRadius = "";
+  facebook.style.backgroundColor = "";
+});
+
+
 
 
 

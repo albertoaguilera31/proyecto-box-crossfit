@@ -187,14 +187,6 @@
     font-weight: bold;
 }
 
-#btn-suscripcion1:hover{
-    background-color: rgb(161, 5, 200);
-    color: white;
-}
-
-#btn-suscripcion1 a:hover{
-    color: white;
-}
 
 #btn-suscripcion2{
     background-color: rgb(250, 222, 67);
@@ -207,14 +199,6 @@
     font-weight: bold;
 }
 
-#btn-suscripcion2:hover{
-    background-color: rgb(212, 34, 34);
-    color: white;
-}
-
-#btn-suscripcion2 a:hover{
-    color: white;
-}
 
 #btn-suscripcion3{
     background-color: rgb(250, 222, 67);
@@ -227,14 +211,6 @@
     font-weight: bold;
 }
 
-#btn-suscripcion3:hover{
-    background-color: rgb(246, 158, 6);
-    color: white;
-}
-
-#btn-suscripcion3 a:hover{
-    color: white;
-}
 
 #btn-suscripcion4{
     background-color: rgb(250, 222, 67);
@@ -247,14 +223,6 @@
     font-weight: bold;
 }
 
-#btn-suscripcion4:hover{
-    background-color: rgb(6, 66, 246);
-    color: white;
-}
-
-#btn-suscripcion4 a:hover{
-    color: white;
-}
 
 /*FOOTER*/
 footer{
@@ -274,14 +242,11 @@ footer h3{
 section a img{
     height: 50px;
     width: 50px;
-    transform: translateX(500px);
-    margin-right: 50px;
-    margin-top: 25px;
+    
   }
 
   footer p{
     text-align: center;
-    transform: translateY(55px);
     margin-top: 10px;
     margin-bottom: 50px;
   }
@@ -293,9 +258,9 @@ section a img{
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 30px auto;
+    margin: 20px auto;
     background-color: rgba(184, 181, 181, 0.411);
-    width: 700px;
+    max-width: 800px;
   }
   
   h1 {
@@ -307,17 +272,39 @@ section a img{
     font-size: 1rem;
   }
   
-  input[type="text"],
-  input[type="number"],
-  input[type="email"],
-  select {
-    width: 300px;
-    padding: 10px;
-    margin-bottom: 10px;
-    font-size: 0.8rem;
-    text-align: center;
+  .container {
+    max-width: 800px; 
+    margin: 0 auto;
+    padding: 20px; 
+  }
+
+  
+  .row {
+    margin-bottom: 10px; 
   }
   
+  label {
+    display: block; 
+    margin-bottom: 5px; 
+  }
+  
+  input,
+  select {
+    width: 100%; 
+    padding: 7px; 
+  }
+
+  .pagos-icon {
+    display: block; 
+    margin: 20px auto; 
+    max-width: 100%; 
+  }
+  
+  button[type="submit"] {
+    display: block; 
+    margin: 0 auto;
+  }
+
   button[type="submit"] {
     padding: 10px 20px;
     font-size: 1rem;
@@ -326,40 +313,41 @@ section a img{
     border: none;
     border-radius: 3px;
     cursor: pointer;
-    margin-top: 30px;
+    margin-top: 20px;
   }
 
-  #botonVerData{
-    padding: 10px 20px;
-    display: none;
-    margin: 0 auto;
-    background-color: #4caf50;
-    color: white;
-    border-radius: 3px;
-    border: none;
-    cursor: pointer;
-  }
-
-  #contenedor-mensaje{
-    font-size: 2.5rem;
-    margin: 0 auto;
-    text-align: center;
-  }
-
-  hr{
-    border: none;
-    height: 1px;
-    background-color: #000; /* Cambia el color según tus preferencias */
-    margin: 20px 0; /* Ajusta el margen según sea necesario */
+  button[type="submit"]:hover{
+    background-color:green;
   }
 
   .pagos-icon{
     height: 85px;
-    width: 300px;
+    width: 200px;
     display: flex;
     justify-content: center;
     align-items: center;
-  }
+    }
+
+    #botonVerData{
+        padding: 10px 20px;
+        display: none;
+        margin: 0 auto;
+        background-color: #4caf50;
+        color: white;
+        border-radius: 3px;
+        border: none;
+        cursor: pointer;
+      }
+
+      #botonVerData:hover{
+        background-color:green;
+      }  
+    
+    #contenedor-mensaje{
+        font-size: 2.5rem;
+        margin: 0 auto;
+        text-align: center;
+      }
 
 
 
