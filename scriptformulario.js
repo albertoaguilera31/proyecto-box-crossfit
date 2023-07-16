@@ -3,7 +3,7 @@
 
   const formulario = document.getElementById('formularioSuscripcion');
 const opcionesSelect = document.getElementById('opciones');
-const opciones = ['Legionario', 'Espartano', 'Tercio', 'Navy Seal'];
+const opciones = ['Legionario: 25USD', 'Espartano: 45USD', 'Tercio: 60USD', 'Navy Seal: 100USD'];
 const botonVerData = document.getElementById('botonVerData');
 
 // Generar las opciones de suscripción dinámicamente con bucle for
@@ -79,6 +79,20 @@ function generarCodigoAleatorio() {
   return codigo;
 }
 
+//Formulario de pago para la selección del tipo de pago generado dinámicamente con bucle for
+
+const tipoPagoSelect = document.getElementById('tipoPago');
+const opciones2 = ['Tarjeta de crédito', 'Tarjeta de débito'];
+
+for (let i = 0; i < opciones2.length; i++) {
+const opcion = document.createElement('option');
+opcion.value = opciones2[i];
+opcion.textContent = opciones2[i];
+tipoPagoSelect.appendChild(opcion);
+}
+
+//Función para recuperar data del localstorage y luego mostrarla en pantalla usando sweetalert2
+
 function mostrarDatosSuscripcion() {
   const recuperarData = localStorage.getItem('formularioData');
   const mostrarDataJson = JSON.parse(recuperarData);
@@ -104,6 +118,7 @@ function mostrarDatosSuscripcion() {
     confirmButtonText: 'Aceptar'
   });
 }
+
 
 
 
