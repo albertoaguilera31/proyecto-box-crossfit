@@ -24,17 +24,22 @@
         </button>
         <div class="collapse navbar-collapse" id="navbar-toggler">
           <a class="navbar-brand" href="index.html">
-            <img src="./imagenes/pesa-rusa.png" width="50" alt="Warriors box">WARRIOS BOX<img>
+            <img src="./imagenes/pesa-rusa.png" width="50" alt="Warriors box">WARRIORS BOX<img>
           </a>
+          <ul class="navbar-nav d-flex justify-content-center align-items-center">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Volver al menú principal</a>
+            </li>
+          </ul>
         </div>
       </div>
     </nav>
-    
+  
     <div class="container">
       <form id="formularioSuscripcion">
         <h1 class="text-center">SUSCRIBIRME AL WARRIORS BOX</h1>
     
-        <div class="row" style="margin-left: 45px;">
+        <div class="row" style="margin-left: 45px; ">
           <div class="col-lg-5">
             <label for="nombre">Nombre:</label>
             <input type="text" id="nombre" autocomplete="off" required>
@@ -46,7 +51,7 @@
           </div>
         </div>
     
-        <div class="row" style="margin-left: 45px; width: 600px;">
+        <div class="row" style="margin-left: 45px; ">
           <div class="col-lg-5">
             <label for="edad">Edad:</label>
             <input type="number" id="edad" autocomplete="off" required>
@@ -58,7 +63,7 @@
           </div>
         </div>
     
-        <div class="row" style="margin-left: 45px; width: 600px;">
+        <div class="row" style="margin-left: 45px; ">
           <div class="col-lg-5">
             <label for="opciones">Tipo de suscripción:</label>
             <select id="opciones">
@@ -74,7 +79,7 @@
           </div>
         </div>
     
-        <div class="row" style="margin-left: 45px; width: 600px;">
+        <div class="row" style="margin-left: 45px; ">
           <div class="col-lg-5">
             <label for="numeroTarjeta">Número de tarjeta:</label>
             <input type="number" id="numeroTarjeta" autocomplete="off" required>
@@ -106,12 +111,12 @@
     <button id="botonVerData" onclick="mostrarDatosSuscripcion()" style="display: none;">Ver datos de suscripción</button>
 
     <footer class="container-fluid">
-      <div class="row">
-        <div class="col-12 col-md-6">
+      <div class="row container-fluid">
+        <div class="col-12 col-md-6 container-fluid" id="titulo-footer">
           <h3 id="Contactos-titulo">Contáctanos</h3>
         </div>
-        <div class="col-12 col-md-6 text-center text-md-end">
-          <section class="redes-sociales">
+        <div>
+          <section class="container-fluid">
             <a href="#" class="red-social" id="facebook"><img src="./imagenes/facebook (1).png" alt="Facebook"></a>
             <a href="#" class="red-social" id="instagram"><img src="./imagenes/instagram (1).png" alt="Instagram"></a>
             <a href="#" class="red-social" id="twiter"><img src="./imagenes/gorjeo (1).png" alt="Twitter"></a>
@@ -124,6 +129,10 @@
         </div>
       </div>
     </footer>
+
+    <a href="#" class="floating-link">
+      <img src="./imagenes/pesa-rusa.png" alt="Ícono" class="floating-icon">volver
+    </a>
 
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>    
     <script src="./scriptformulario.js"></script>

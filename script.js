@@ -25,7 +25,6 @@ btn1.addEventListener("mouseout", function(){
   btn1.style.color="";
 });
 
-
 //tarjeta espartano
 let espartano = document.getElementById("card-espartano");
 let btn2 = document.getElementById("btn-suscripcion2");
@@ -167,23 +166,6 @@ window.onscroll = function() {
   const iconovolver = document.querySelector('.floating-link');
   iconovolver.style.display = 'block';
 };
-
-//USO DEL DOM PARA AÑADIR EFECTOS A LOS ICONOS DE REDES SOCIALES DE CONTACTO
-
-let facebook = document.getElementById("facebook");
-let icon = facebook.querySelector("img");
-
-// Agregar el evento mouseover al icono
-icon.addEventListener("mouseover", function() {
-  icon.style.borderRadius = "50%";
-  facebook.style.backgroundColor = "white";
-});
-
-// Agregar el evento mouseout al icono
-icon.addEventListener("mouseout", function() {
-  icon.style.borderRadius = "";
-  facebook.style.backgroundColor = "";
-});
 
 
 

@@ -232,24 +232,55 @@ footer{
     border-top: 2px solid rgb(250, 222, 67);
     border-bottom: 3px solid rgb(250, 222, 67);
     margin-top: 35px;
+    max-width: 100%;
 }
 
-footer h3{
-    text-align: center;
-    padding-top: 45px;
+  #facebook{
+    margin-right: 25px;
 }
 
-section a img{
+#instagram{
+    margin-right: 25px;
+}
+
+#twiter{
+    margin-right: 25px;
+}
+
+#tik-tok{
+    margin-right: 25px;
+}
+
+#whatsapp{
+    margin-right: 25px;
+}
+
+section{
+    display: flex;
+    justify-content: center;
+}
+
+  section a img{
     height: 50px;
     width: 50px;
-    
   }
 
-  footer p{
+  #Contactos-titulo {
     text-align: center;
-    margin-top: 10px;
-    margin-bottom: 50px;
+    margin-top: 15px;
   }
+  
+  #copy {
+    text-align: center;
+    margin-top: 60px;
+  }
+  
+  section {
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+  }
+  
 
 
 /*FORMULARIO*/

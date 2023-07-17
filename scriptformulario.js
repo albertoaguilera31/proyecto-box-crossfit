@@ -119,6 +119,14 @@ function mostrarDatosSuscripcion() {
   });
 }
 
+//SCROLL DE LA PAGINA
+
+window.onscroll = function() {
+  // Código a ejecutar cuando se activa el scroll
+  const iconovolver = document.querySelector('.floating-link');
+  iconovolver.style.display = 'block';
+};
+
 
 
 
