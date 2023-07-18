@@ -291,18 +291,18 @@ section{
     align-items: center;
     margin: 20px auto;
     background-color: rgba(184, 181, 181, 0.411);
-    max-width: 700px;
+    max-width: 650px;
   }
   
-  h1 {
-    font-size: 1rem;
+  form h1 {
+    font-size: 2rem;
     margin-bottom: 30px;
   }
 
-  /* Estilos personalizados para los inputs */
 .form-control {
   width: 100%;
   margin-bottom: 15px;
+  margin-left: 11px;
 }
 
 #fechaVencimiento,
@@ -315,6 +315,7 @@ section{
   
   label {
     font-size: 1rem;
+    margin-left: 11px;
   }
   
   .container {
@@ -366,7 +367,7 @@ section{
   }
 
   .pagos-icon{
-    height: 90px;
+    height: 100px;
     width: 250px;
     display: flex;
     justify-content: center;
