@@ -291,20 +291,34 @@ section{
     align-items: center;
     margin: 20px auto;
     background-color: rgba(184, 181, 181, 0.411);
-    max-width: 800px;
+    max-width: 700px;
   }
   
   h1 {
     font-size: 1rem;
     margin-bottom: 30px;
   }
+
+  /* Estilos personalizados para los inputs */
+.form-control {
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+#fechaVencimiento,
+#opciones,
+#tipoPago,
+#numeroTarjeta {
+  width: 180px;
+  margin-right: 40px;
+}
   
   label {
     font-size: 1rem;
   }
   
   .container {
-    max-width: 800px; 
+    max-width: 700px; 
     margin: 0 auto;
     padding: 20px; 
   }
@@ -322,12 +336,12 @@ section{
   input,
   select {
     width: 100%; 
-    padding: 7px; 
+    padding: 5px; 
   }
 
   .pagos-icon {
     display: block; 
-    margin: 20px auto; 
+    margin: 15px auto; 
     max-width: 100%; 
   }
   
@@ -352,8 +366,8 @@ section{
   }
 
   .pagos-icon{
-    height: 85px;
-    width: 200px;
+    height: 90px;
+    width: 250px;
     display: flex;
     justify-content: center;
     align-items: center;

@@ -1,4 +1,4 @@
-//Uso del DOM para estilo de las cards de suscricripcion
+//Uso del DOM para estilos de las tarjetas de suscricripcion
 
 //tarjeta legionario
 let legionario = document.getElementById("card-legionario");
@@ -100,7 +100,7 @@ btn4.addEventListener("mouseout", function(){
   btn4.style.color="";
 });
 
-//Uso del DOM para estilo en la navabar
+//Uso del DOM para estilo del boton de suscripcion en la navabar
 let botonBarra = document.getElementById("botonBarra1")
 
 botonBarra.addEventListener("mouseover", function() {
@@ -118,6 +118,19 @@ botonBarra.addEventListener("mouseover", function() {
 });
 
 //FUNCION PARA CAMBIAR AUTOMATICAMENTE LAS IMAGENES DEL CARRUSEL
+
+document.addEventListener('DOMContentLoaded', () => {
+  // Obtén una referencia al carrusel
+  const carousel = document.querySelector('#carouselExampleCaptions');
+
+  // Función para desplazar al siguiente elemento del carrusel
+  const avanzarSlide = () => {
+    const nextButton = carousel.querySelector('[data-bs-slide="next"]');
+    nextButton.click();
+  };
+
+  setInterval(avanzarSlide, 3000);
+});
 
 
 
