@@ -1,18 +1,23 @@
 
-//FORMULARIO DE SUSCRIPCIÓN
+//FORMULARIO DE SUSCRIPCIÓN AL WARRIORS BOX
 
-  const formulario = document.getElementById('formularioSuscripcion');
+//Uso del DOM para seleccionar los elementos del formulario en el documento html
+
+const formulario = document.getElementById('formularioSuscripcion');
 const opcionesSelect = document.getElementById('opciones');
 const opciones = ['Legionario: 25USD', 'Espartano: 45USD', 'Tercio: 60USD', 'Navy Seal: 100USD'];
 const botonVerData = document.getElementById('botonVerData');
 
-// Generar las opciones de suscripción dinámicamente con bucle for
+// Código para generar las opciones de suscripción dinámicamente con bucle for
+
 for (let i = 0; i < opciones.length; i++) {
   const opcion = document.createElement('option');
   opcion.value = opciones[i];
   opcion.textContent = opciones[i];
   opcionesSelect.appendChild(opcion);
 }
+
+//Código para crear un objeto con la clase cliente usando los datos introduccidos por el usuario en el formulario 
 
 formulario.addEventListener('submit', function(event) {
   event.preventDefault();
@@ -33,6 +38,8 @@ formulario.addEventListener('submit', function(event) {
 
   const contenedorMensaje = document.getElementById('contenedor-mensaje');
 
+  //codigo para mostrar mensaje de suscripción rechazada del usuario menor de 18 años con sweetalert2
+
   if (edad < 18) {
     Swal.fire({
       title: 'Suscripción rechazada',
@@ -41,6 +48,9 @@ formulario.addEventListener('submit', function(event) {
       confirmButtonText: 'Aceptar'
     });
   } else {
+
+    //codigo para mostrar mensaje de suscripción exitosa del usuario con sweetalert2 y almacenar datos de suscripción del usuario en el localStorage
+
     const mensajeElemento = document.createElement('p');
     mensajeElemento.textContent = '¡Bienvenido al Warriors Box, futuro guerrero!';
     mensajeElemento.style.color = '#53D106';
@@ -65,6 +75,8 @@ formulario.addEventListener('submit', function(event) {
 
   formulario.reset();
 });
+
+//Función para generar codigo de suscripción aleatorio para el usuario luego de la suscrición exitosa
 
 function generarCodigoAleatorio() {
   const caracteres = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
@@ -119,7 +131,7 @@ function mostrarDatosSuscripcion() {
   });
 }
 
-//SCROLL DE LA PAGINA
+//Codigo para añadir el evento onscroll para activar el boton de volver al menú principal
 
 window.onscroll = function() {
   // Código a ejecutar cuando se activa el scroll

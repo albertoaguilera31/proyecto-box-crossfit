@@ -101,15 +101,18 @@ btn4.addEventListener("mouseout", function(){
 });
 
 //Uso del DOM para estilo del boton de suscripcion en la navabar
+
 let botonBarra = document.getElementById("botonBarra1")
 
+// Agregar el evento mouseover del boton de suscripción
 botonBarra.addEventListener("mouseover", function() {
     botonBarra.style.color= "white";
     botonBarra.style.backgroundColor = "rgb(194, 10, 10)";
     botonBarra.style.boxShadow= "2px 2px 5px black";
     botonBarra.style.cursor= "pointer";
 
-    botonBarra.addEventListener("mouseout", function() {
+  // Agregar el evento mouseout del boton de suscripción
+  botonBarra.addEventListener("mouseout", function() {
       botonBarra.style.color = "";
       botonBarra.style.backgroundColor = ""; 
       botonBarra.style.boxShadow = ""; 
@@ -117,13 +120,12 @@ botonBarra.addEventListener("mouseover", function() {
   });
 });
 
-//FUNCION PARA CAMBIAR AUTOMATICAMENTE LAS IMAGENES DEL CARRUSEL
+//Función para cambiar automaticamente las imagenes del carrusel
 
 document.addEventListener('DOMContentLoaded', () => {
-  // Obtén una referencia al carrusel
+
   const carousel = document.querySelector('#carouselExampleCaptions');
 
-  // Función para desplazar al siguiente elemento del carrusel
   const avanzarSlide = () => {
     const nextButton = carousel.querySelector('[data-bs-slide="next"]');
     nextButton.click();
@@ -132,9 +134,7 @@ document.addEventListener('DOMContentLoaded', () => {
   setInterval(avanzarSlide, 3000);
 });
 
-
-
-//CODIGO PARA CARGAR INFORMACIÓN DEL ARCHIVO JSON AL CARRUSEL USANDO FETCH
+//Codigo para cargar la información contenida en el archivo index.json dentro del carrusel de testimonios usando petición Fetch
 
 document.addEventListener('DOMContentLoaded', () => {
   // Obtén una referencia al elemento del carrusel
@@ -144,18 +144,14 @@ document.addEventListener('DOMContentLoaded', () => {
   fetch('index.json')
     .then(response => response.json())
     .then(data => {
-      // Itera sobre los objetos del JSON
       data.forEach((objeto, index) => {
-        // Crea un nuevo elemento de carrusel para cada objeto
         const carouselItem = document.createElement('div');
         carouselItem.classList.add('carousel-item');
 
-        // Si es el primer objeto, añade la clase 'active' para que se muestre primero
         if (index === 0) {
           carouselItem.classList.add('active');
         }
 
-        // Crea el contenido del carrusel con los datos del objeto
         carouselItem.innerHTML = `
           <img src="./imagenes/carrusel/imagen${index + 1}.jpg" class="d-block w-100 carousel-img" alt="...">
           <div class="carousel-caption d-none d-md-block">
@@ -165,14 +161,13 @@ document.addEventListener('DOMContentLoaded', () => {
           </div>
         `;
 
-        // Agrega el elemento del carrusel al carrusel principal
         carousel.appendChild(carouselItem);
       });
     })
     .catch(error => console.error(error));
 });
 
-//SCROLL DE LA PAGINA
+//Codigo para añadir el evento onscroll para activar el boton de volver al menú principal
 
 window.onscroll = function() {
   // Código a ejecutar cuando se activa el scroll
